@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Lista de Clientes Cadastrados:</h3>
+    <ul>
+        <% clientes.forEach((cliente) => { %>
+            <li> 
+                <p>
+                    <b>Nome:</b> <%= cliente.informacoesPessoais.nome %> <%= cliente.informacoesPessoais.sobrenome %>
+                </p>
+                <p>
+                    <b>Endereço:</b> 
+                        <%= cliente.informacoesDeEndereco.logradouro %> -
+                        <%= cliente.informacoesDeEndereco.numero %>,
+                        <%= cliente.informacoesDeEndereco.bairro %>,
+                        <%= cliente.informacoesDeEndereco.cidade %>.
+                </p>
+                <p>
+                    <b>Contato:</b> <br>
+                    Celular: <%= cliente.informacoesDeContato.celular %> <br>
+                    E-mail: <%= cliente.informacoesDeContato.email %>
+                </p>
+            </li>
+            <p>-----------------------------------------------------------------------------------</p>
+        <% }) %>
+    </ul>
+</body>
+</html>
