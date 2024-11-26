@@ -1,0 +1,19 @@
+{
+  "name": "pizzadmin",
+  "version": "0.0.1",
+  "description": "Sistema para administração de uma pizzaria.",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "nodemon app.js"
+    
+  },
+  "author": "Gustavo Hortega",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.3",
+    "nodemon": "^3.1.7"
+  }
+}
