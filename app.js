@@ -5,6 +5,7 @@ const path = require('path');
 //importa routers.
 const routerHome = require('./routes/home');
 const routerClientes = require('./routes/clientes');
+const routerPedidos = require('./routes/pedidos');
 const {connect} = require('./models')
 
 const app = express();
@@ -17,6 +18,7 @@ app.set('view engine', 'ejs');
 //routes.
 app.use('/', routerHome);
 app.use('/clientes', routerClientes);
+app.use('/pedidos', routerPedidos);
 
 //Arquivos estáticos.
 app.use(express.static('public'));
@@ -27,3 +29,4 @@ app.listen(port, ()=>{
 
     console.log(`Servido ouvindo na porta: ${port}.`)
 })
+
