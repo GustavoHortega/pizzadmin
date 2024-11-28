@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 
 const clienteSchema = require('./cliente');
+const pedidoSchema = require('./pedido');
 
 const Cliente = mongoose.model('Cliente', clienteSchema);
+const Pedido = mongoose.model('Pedido', clienteSchema);
 
 const connect = () =>{
 
@@ -12,5 +14,6 @@ const connect = () =>{
 
 module.exports = {
     connect,
+    Pedido,
     Cliente,
 }
