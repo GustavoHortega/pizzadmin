@@ -6,7 +6,6 @@
   "scripts": {
     "test": "test",
     "start": "nodemon app.js"
-    
   },
   "author": "Gustavo Hortega",
   "license": "ISC",

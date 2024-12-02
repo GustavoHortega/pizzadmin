@@ -1,0 +1,38 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+
+    color: #fff;
+    font-family: "Montserrat Alternates", sans-serif;
+    
+    background-color: rgba(23, 23, 23, 0.9);
+}
+
+
+
+#pedidos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os pedidos quebrem para a próxima linha se necessário */
+    gap: 20px; /* Espaçamento entre os pedidos */
+    justify-content: start; /* Alinha os pedidos ao centro */
+}
+
+#pedido {
+    background-color: #4d4d4d;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px; /* Largura fixa para os pedidos */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombras para dar efeito de quadrado elevado */
+    margin: 10px;
+    text-align: left;
+}
+
+
+
+button{
+    padding: 10px;
+    margin: 10px;
+    left: 15px;
+    border-radius:5px ;
+}
