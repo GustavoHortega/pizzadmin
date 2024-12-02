@@ -1,6 +1,10 @@
 const { Schema } = require('mongoose');
 
 const Pedido = new Schema({
+    id:{
+        type: Number,
+        required: true
+    },
     cliente:{
         nome:{
             type: String,
@@ -33,6 +37,10 @@ const Pedido = new Schema({
             quantidade:{
                 type: Number,
                 required: true
+            },
+            observacao:{
+                type: String,
+                required: false
             }
         }
     ],
@@ -47,6 +55,10 @@ const Pedido = new Schema({
     },
     pago:{
         type: Boolean,
+        required: true
+    },
+    entregue:{
+        type:Boolean,
         required: true
     }
 });
