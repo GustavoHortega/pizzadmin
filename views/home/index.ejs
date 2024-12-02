@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href='http://localhost:3000/css/home.css'>
-    <title>Document</title>
+    <title>PizzaDmin</title>
 </head>
 <body>
-    <h2>PizzaDmin</h2>
+    
     <ul>
-        <li><a href="clientes">clientes</a></li>
-        <li><a href="pizzas"></a>pizzas</li>
-        <li><a href="pedidos"></a>pedidos</li>
+        <li><a href="clientes">Clientes</a></li>
+        <li><a href="pedidos">Pedidos</a></li>
+        <li><a href="produtos">Produtos</a></li>
+        <li><a href="pedidos">Painel</a></li>
+        <li><a href="pedidos">Financeiro</a></li>
+        <li><a href="pedidos">Perfil</a></li>
     </ul>
+    <img src="http://localhost:3000/images/Pizzadmin-logo.png" alt="">
+
+    <button>Adicionar Pedido(+)</a></button>
+
+    <!-- Contêiner para os pedidos -->
+    <div id="pedidos">
+        <% pedidos.forEach((pedido) => { %>
+            <div id="pedido">
+                ID: <%=pedido.id%>
+                <p><b>Nome:</b>  <%= pedido.cliente.nome %> <%= pedido.cliente.sobrenome %> <br></p>
+                <p><b>Endereço:</b>  <%= pedido.endereco %> <br></p>
+
+                <b>Pizzas:</b> <br>
+                <% pedido.pizzas.forEach((pizza) => { %>
+                    <%= pizza.sabor %> - <%= pizza.tamanho %>
+                    - Qtd: <%= pizza.quantidade %> <p></p>
+                    <% if(pizza.observacao) { %>
+                        
+                        <b>Observação:</b>
+                        <%= pizza.observacao %>  
+                    <% } %>
+                <% }) %>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
 </body>
 </html>
