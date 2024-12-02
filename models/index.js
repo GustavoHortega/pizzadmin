@@ -4,7 +4,7 @@ const clienteSchema = require('./cliente');
 const pedidoSchema = require('./pedido');
 
 const Cliente = mongoose.model('Cliente', clienteSchema);
-const Pedido = mongoose.model('Pedido', clienteSchema);
+const Pedido = mongoose.model('Pedido', pedidoSchema);
 
 const connect = () =>{
 
