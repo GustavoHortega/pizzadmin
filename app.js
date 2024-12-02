@@ -6,7 +6,7 @@ const path = require('path');
 const routerHome = require('./routes/home');
 const routerClientes = require('./routes/clientes');
 const routerPedidos = require('./routes/pedidos');
-const {connect} = require('./models')
+const {connect} = require('./models');
 
 const app = express();
 const port = 3000;
