@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 
 //importa routers.
-const routerHome = require('./routes/home');
+const routerPainel = require('./routes/painel');
 const routerClientes = require('./routes/clientes');
 const routerPedidos = require('./routes/pedidos');
 const {connect} = require('./models');
@@ -16,7 +16,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //routes.
-app.use('/', routerHome);
+app.use('/', routerPainel);
+app.use('/painel', routerPainel);
 app.use('/clientes', routerClientes);
 app.use('/pedidos', routerPedidos);
 

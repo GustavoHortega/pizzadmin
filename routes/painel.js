@@ -4,7 +4,7 @@ const { Pedido } = require("../models")
 
 router.get('/', (_,res)=>{
     Pedido.find({}).then((pedidos) => {
-        res.render('home/index', {
+        res.render('painel/index', {
             pedidos:pedidos,
         });
     });
